@@ -6,8 +6,6 @@ from streamlit_gsheets import GSheetsConnection
 st.set_page_config(page_title="Shoe Store System", layout="wide")
 st.title("👞 Shoe Store Management System")
 
-conn = st.connection("gsheets", type=GSheetsConnection)
-
 def get_data(ws):
     return conn.read(worksheet=ws)
 
